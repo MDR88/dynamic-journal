@@ -25,15 +25,16 @@ function populateCard() {
 
     let bodyDiv = document.createElement("div");
     bodyDiv.style.backgroundImage = "url('bookBack.jpg')";
-    bodyDiv.style.backgroundSize = "1000px 750px";
     bodyDiv.style.backgroundPosition = "-10px -10px"
 
     let contentMain = document.createElement("p");
     contentMain.textContent = content.value;
+    contentMain.style.margin = "0 1em 1em 4em";
 
     let date = new Date();
     let dateElement = document.createElement("p");
     dateElement.textContent = date;
+    dateElement.style.margin = "1em 1em 0 4em"
 
     card.style.margin = "2em";
     card.style.border = "3px dotted black";
@@ -41,6 +42,8 @@ function populateCard() {
 
 
     card.appendChild(titleDiv);
+    bodyDiv.appendChild(document.createElement("br"));
+    bodyDiv.appendChild(document.createElement("br"));
     bodyDiv.appendChild(contentMain);
     bodyDiv.appendChild(document.createElement("br"));
     bodyDiv.appendChild(dateElement);
